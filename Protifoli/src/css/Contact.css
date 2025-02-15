@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact-section {
+  text-align: center;
+  background: linear-gradient(45deg, #0e0e0e, #121212, #1a1a1a);
+  color: white;
+  padding: 60px 20px;
+  animation: backgroundSlide 10s infinite alternate;
+  min-height: 100vh;
+}
+
+@keyframes backgroundSlide {
+  0% { background: linear-gradient(45deg, #0e0e0e, #1a1a1a); }
+  100% { background: linear-gradient(45deg, #1a1a1a, #0e0e0e); }
+}
+
+.contact-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.highlight {
+  color: orange;
+}
+
+.contact-text {
+  margin-bottom: 30px;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  max-width: 900px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+/* Contact Details */
+.contact-details {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(255, 165, 0, 0.2);
+  width: 100%;
+  max-width: 350px;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.icon {
+  font-size: 24px;
+  background: orange;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Contact Form */
+.contact-form {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(255, 165, 0, 0.2);
+  width: 100%;
+  max-width: 450px;
+}
+
+.form-group {
+  display: flex;
+  gap: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  background: #222;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.submit-btn {
+  background: orange;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-group {
+    flex-direction: column;
+  }
+}

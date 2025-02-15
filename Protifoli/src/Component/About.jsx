@@ -5,6 +5,29 @@ export default function About() {
     const controls = useAnimation();
     const sectionRef = useRef(null);
     const [isVisible, setIsVisible] = useState(false);
+
+
+    
+    const resumeData = [
+        {
+          title: "Diploma In Front End Web Development",
+          institution: "Cybrom Technology PVT LTD ",
+          description:
+            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis maiores iusto.",
+        },
+        {
+          title: "Diploma In Back End Web Development",
+          institution: "Cybrom Technology PVT LTD ",
+          description:
+            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis maiores iusto.",
+        },
+        {
+          title: "Degree In B.Sc ",
+          institution: "Cybrom Technology PVT LTD ",
+          description:
+            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis maiores iusto.",
+        },
+      ];
   
     // Observer to track visibility of the section
     useEffect(() => {
@@ -28,7 +51,9 @@ export default function About() {
     }, [controls]);
   
     return (
-      <motion.section
+
+        <>
+              <motion.section
         className="about-section"
         ref={sectionRef}
         initial="hidden"
@@ -104,6 +129,43 @@ export default function About() {
           </motion.div>
         </div>
       </motion.section>
+
+
+
+
+
+
+      <section className="resume-section">
+      <h2 className="text-center">
+        My <span className="highlight">Resume</span>
+      </h2>
+      <p className="text-center">Education</p>
+      <div className="container">
+        <div className="row">
+          {resumeData.map((item, index) => (
+            
+            <div key={index} className="col-md-4">
+              <div className="resume-card">
+                <div className="resume-card-inner">
+                  {/* Front Side */}
+                  <div className="resume-card-front">
+                    <h4>{item.title}</h4>
+                    <p>{item.institution}</p>
+                  </div>
+                  {/* Back Side */}
+                  <div className="resume-card-back">
+                    <p>{item.description}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+      </>
+
     );
   
 }
