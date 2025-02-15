@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+
+
+.about-section {
+  text-align: center;
+  background-color: #121212;
+  color: white;
+  padding: 60px 20px;
+  overflow: hidden;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.highlight {
+  color: orange;
+}
+
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  max-width: 900px;
+  margin: auto;
+  flex-wrap: wrap;
+  /* width: 100%;
+  border: 2px solid white; */
+}
+
+/* Image Section */
+.image-container {
+  width: 100%;
+  height: 100%;
+  /* height: 100%; */
+  max-width: 500px;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0px 0px 20px rgba(255, 165, 0, 0.5);
+}
+
+.image-container img {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s ease-in-out;
+  border: 4px solid orange;
+  border-radius: 10px;
+}
+
+.image-container:hover img {
+  transform: scale(1.05);
+}
+
+/* Personal Info */
+.info-container {
+  text-align: left;
+  max-width: 400px;
+}
+
+.info-container h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.info-container p {
+  font-size: 1rem;
+  margin: 5px 0;
+  opacity: 0.8;
+}
+
+/* Button */
+.hire-me {
+  background: orange;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px rgba(255, 165, 0, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+
+.hire-me:hover {
+  background: #ff8c00;
+  box-shadow: 0px 6px 15px rgba(255, 140, 0, 0.8);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .info-container {
+    text-align: center;
+  }
+}
+
+@media (max-width: 420px) {
+    .about-container {
+      flex-direction: column;
+      align-items: center;
+      font-size: 8px;
+    }
+    .info-container {
+      text-align: center;
+    }
+  }

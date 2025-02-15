@@ -4,7 +4,14 @@ import CV from '../images/NewBsc.pdf'
 import dp from '../images/dp.jpg'
 import "../css/Hersection.css";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 export default function HeroSection() {
+  const roles = [ "Full Stack Developer","Front-end Developer", "Back-end Developer"];
+
+
+  const [displayText, setDisplayText] = useState("");
+  const [index, setIndex] = useState(0);
+
   const handleDownload = () => {
     const link = document.createElement("a");
     link.href = 'https://drive.google.com/file/d/17KV-ppUlZDjmhP5RGL1kdU2fx47g31C6/view?usp=drive_link'; // Path from public folder
@@ -13,6 +20,19 @@ export default function HeroSection() {
     link.click();
     document.body.removeChild(link);
   };
+
+
+
+  useEffect(() => {
+    if (index < roles.length) {
+      const timer = setTimeout(() => {
+        setDisplayText(roles[index]);
+      setIndex((prevIndex) => (prevIndex + 1) % roles.length);
+      }, 3000); // Change role every 2 seconds
+
+      return () => clearTimeout(timer);
+    }
+  }, [index])
   return (
   
         <section className="hero-section d-flex flex-column flex-md-row align-items-center justify-content-center text-white p-5">
@@ -33,7 +53,7 @@ export default function HeroSection() {
               Hi, I'm <span className="text-warning">Bipin singh</span>
             </h1>
             {/* <h2 className="animate__animated animate__fadeInUp animate__delay-2s">A <span className="highlight">Web Developer</span></h2> */}
-            <h3 className="fw-bold text-danger animate__animated animate__zoomIn">A Web Developer</h3>
+            {/* <h3 className="fw-bold text-danger animate__animated animate__zoomIn">A {displayText}</h3> */}
 
 
             <motion.h3
@@ -41,7 +61,7 @@ export default function HeroSection() {
               animate={{ opacity: [0, 1, 0], scale: [0.8, 1, 0.8] }}
               transition={{ repeat: Infinity, duration: 2 }}
             >
-              A Web Developer
+              A {displayText}
 
 
             </motion.h3>
