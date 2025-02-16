@@ -1,5 +1,5 @@
 import React, { useState, useEffect,useRef } from "react";
-import { Container, Row, Col, Card, Button } from "react-bootstrap";
+// import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import { motion, useAnimation } from "framer-motion";
 import "../css/Project.css";
 
@@ -12,24 +12,30 @@ const projects = [
     githubLink: "https://github.com/example/ecommerce",
   },
   {
-    title: "Portfolio Website",
+    title: "Employee Mangment system",
     image: "https://source.unsplash.com/400x300/?portfolio,website",
-    description: "A personal portfolio website showcasing projects and skills.",
-    demoLink: "https://example.com/portfolio",
-    githubLink: "https://github.com/example/portfolio",
+    description: "Employee Managment system useing backend node.js",
+    demoLink: "classy-torrone-0bd9d0.netlify.app",
+    githubLink: "https://github.com/bipinsingh8052/Dashboard-in-MongoDB-and-React-",
   },
   {
-    title: "Weather App",
+    title: "Instgram Home Page Clone ",
     image: "https://source.unsplash.com/400x300/?weather,forecast",
-    description: "A real-time weather forecasting app using OpenWeather API.",
-    demoLink: "https://example.com/weather",
-    githubLink: "https://github.com/example/weather-app",
+    description: "In this Project i Use database JSON to store a data .  delete comment and so story in that each person.",
+    demoLink: "https://instragram-icon.vercel.app/",
+    githubLink: "https://github.com/bipinsingh8052/Insta_website",
   },{
     title: "Login And SingUp ",
     image: "https://source.unsplash.com/400x300/?weather,forecast",
-    description: "A real-time weather forecasting app using OpenWeather API.",
+    description: "In this Project you can first signup and first match your input then login use it localstroge.",
     demoLink: "https://login-and-sign-up-page-murex.vercel.app/r",
-    githubLink: "https://github.com/example/weather-app",
+    githubLink: "https://github.com/bipinsingh8052/Login_And_SignUp_page_",
+  },{
+    title: "Libaray Mangement System",
+    image: "https://source.unsplash.com/400x300/?weather,forecast",
+    description: "In this Project i Use database JSON to store a data . in this you can Issune Book and Re-issue Book and Submit Book and soo that Student info.",
+    demoLink: "https://library-mangement-tawny.vercel.app/",
+    githubLink: "https://github.com/bipinsingh8052/library_mangement",
   },{
     title: "Weather App",
     image: "https://source.unsplash.com/400x300/?weather,forecast",
@@ -37,36 +43,175 @@ const projects = [
     demoLink: "https://example.com/weather",
     githubLink: "https://github.com/example/weather-app",
   },{
-    title: "Weather App",
+    title: "Todo App",
     image: "https://source.unsplash.com/400x300/?weather,forecast",
-    description: "A real-time weather forecasting app using OpenWeather API.",
-    demoLink: "https://example.com/weather",
-    githubLink: "https://github.com/example/weather-app",
+    description: "Todo list make by the React-redux/toolkit",
+    demoLink: "https://prismatic-pastelito-4fc2ce.netlify.app/",
+    githubLink: "https://github.com/bipinsingh8052/Create-ToDo-list-using-Redux-ToolKit",
   },{
-    title: "Weather App",
+    title: "Todo App",
     image: "https://source.unsplash.com/400x300/?weather,forecast",
-    description: "A real-time weather forecasting app using OpenWeather API.",
-    demoLink: "https://example.com/weather",
-    githubLink: "https://github.com/example/weather-app",
+    description: "Todo list make by the Usememo hook and Use Callback hook",
+    demoLink: "keen-salmiakki-d02f82.netlify.app",
+    githubLink: "https://github.com/bipinsingh8052/Todo-App-in-React",
   },{
-    title: "Weather App",
+    title: "Bipin Store Eco-",
     image: "https://source.unsplash.com/400x300/?weather,forecast",
-    description: "A real-time weather forecasting app using OpenWeather API.",
-    demoLink: "https://example.com/weather",
-    githubLink: "https://github.com/example/weather-app",
+    description: "You can Shop it ....",
+    demoLink: "bipin-store.vercel.app",
+    githubLink: "https://github.com/bipinsingh8052/Bipin-Store",
   },{
-    title: "Weather App",
+    title: "Order-booking-R",
     image: "https://source.unsplash.com/400x300/?weather,forecast",
-    description: "A real-time weather forecasting app using OpenWeather API.",
-    demoLink: "https://example.com/weather",
-    githubLink: "https://github.com/example/weather-app",
-  },{
-    title: "Weather App",
-    image: "https://source.unsplash.com/400x300/?weather,forecast",
-    description: "A real-time weather forecasting app using OpenWeather API.",
-    demoLink: "https://example.com/weather",
-    githubLink: "https://github.com/example/weather-app",
+    description: "You can Book you Order in Restaurant",
+    demoLink: "order-booking-in-restaurant.vercel.app",
+    githubLink: "https://github.com/bipinsingh8052/Order_Booking_in_Restaurant-",
   },
+  {
+    title: "Hotel Booking App",
+    image: "https://source.unsplash.com/400x300/?weather,forecast",
+    description: "You can Book you Hotel and so Hotel details",
+    demoLink: "hotel-booking-website-dun.vercel.app",
+    githubLink: "https://github.com/bipinsingh8052/Hotel-Booking-Website",
+  },{
+    title: "Stock Market website",
+    image: "https://source.unsplash.com/400x300/?weather,forecast",
+    description: "This is single page website in this website we can create by the help of React",
+    demoLink: "stock-market-eight-jade.vercel.app",
+    githubLink: "https://github.com/bipinsingh8052/Stock_market",
+  },{
+    title: "Vegetable E-com",
+    image: "https://source.unsplash.com/400x300/?weather,forecast",
+    description: "this is static website and also responise website also.",
+    demoLink: "vegetable-e-commerce-website-multi-page.vercel.app",
+    githubLink: "https://github.com/bipinsingh8052/Vegetable-e-commerce-website-multi-page",
+  },{
+    title: "digital Clock",
+    image: "https://source.unsplash.com/400x300/?weather,forecast",
+    description: "in this project first is digital clock its by help the HTML, JavaScript",
+    demoLink: "https://github.com/bipinsingh8052/digital-clock-and-hide-and-seek-button",
+    githubLink: "https://github.com/bipinsingh8052/digital-clock-and-hide-and-seek-button",
+  },{
+    title: "Car Amination",
+    image: "https://source.unsplash.com/400x300/?weather,forecast",
+    description: "my help of HTML and CSS property only",
+    demoLink: "car-animation-lyart.vercel.app",
+    githubLink: "https://github.com/bipinsingh8052/Car_Animation",
+  },{
+    title: "Textutlis App ",
+    image: "https://source.unsplash.com/400x300/?weather,forecast",
+    description: "you do it all think",
+    demoLink: "text-utlis-app.vercel.app",
+    githubLink: "https://github.com/bipinsingh8052/Order_Booking_in_Restaurant-",
+  },{
+    title: "Order-booking-R",
+    image: "https://source.unsplash.com/400x300/?weather,forecast",
+    description: "You can Book you Order in Restaurant",
+    demoLink: "order-booking-in-restaurant.vercel.app",
+    githubLink: "https://github.com/bipinsingh8052/TextUtlis_App",
+  },{
+    title: "Drag-Drop",
+    image: "https://source.unsplash.com/400x300/?weather,forecast",
+    description: "Drag- Drop Option",
+    demoLink: "drag-and-drop-cyan.vercel.app",
+    githubLink: "https://github.com/bipinsingh8052/Drag-and-Drop-",
+  },{
+    title: "McDonald Website",
+    image: "https://source.unsplash.com/400x300/?weather,forecast",
+    description: "I create a website Mc Donald only single page this is task",
+    demoLink: "mc-donald-website.vercel.app",
+    githubLink: "https://github.com/bipinsingh8052/McDonald-website",
+  },{
+    title: "Calculator App",
+    image: "https://source.unsplash.com/400x300/?weather,forecast",
+    description: "Calculator App do it Sum and all",
+    demoLink: "https://charming-llama-06295e.netlify.app/",
+    githubLink: "https://github.com/bipinsingh8052/Calculator-app",
+  },{
+    title: "Order-booking-R",
+    image: "https://source.unsplash.com/400x300/?weather,forecast",
+    description: "You can Book you Order in Restaurant",
+    demoLink: "order-booking-in-restaurant.vercel.app",
+    githubLink: "https://github.com/bipinsingh8052/Order_Booking_in_Restaurant-",
+  },{
+    title: "Scholar clone",
+    image: "https://source.unsplash.com/400x300/?weather,forecast",
+    description: "You can soo all thing as same in scholar",
+    demoLink: "scholarwebsite-bipin-singhs-projects-254b2c79.vercel.app",
+    githubLink: "https://github.com/bipinsingh8052/Cloning-Scholar-",
+  },{
+    title: "Order-booking-R",
+    image: "https://source.unsplash.com/400x300/?weather,forecast",
+    description: "You can Book you Order in Restaurant",
+    demoLink: "order-booking-in-restaurant.vercel.app",
+    githubLink: "https://github.com/bipinsingh8052/Order_Booking_in_Restaurant-",
+  },{
+    title: "Fake E-commere",
+    image: "https://source.unsplash.com/400x300/?weather,forecast",
+    description: "You can  Order any item",
+    demoLink: "fake-e-commerce-app.vercel.app",
+    githubLink: "https://github.com/bipinsingh8052/Fake-E-commerce-App",
+  },{
+    title: "Dice-Game",
+    image: "https://source.unsplash.com/400x300/?weather,forecast",
+    description: "You can play it game",
+    demoLink: "dice-game-one-phi.vercel.app",
+    githubLink: "https://github.com/bipinsingh8052/Dice-Game",
+  },{
+    title: "Weather App",
+    image: "https://source.unsplash.com/400x300/?weather,forecast",
+    description: "You can see and where weather",
+    demoLink: "weather-app-omega-lake-82.vercel.app",
+    githubLink: "https://github.com/bipinsingh8052/Weather-App",
+  },{
+    title: "Employe-M-S",
+    image: "https://source.unsplash.com/400x300/?weather,forecast",
+    description: "You can Employee-m-s add",
+    demoLink: "employmangement.netlify.app",
+    githubLink: "https://github.com/bipinsingh8052/Employee-mangment-system",
+  },{
+    title: "Stone-Papper-Scissors",
+    image: "https://source.unsplash.com/400x300/?weather,forecast",
+    description: "You can play game with Computer ",
+    demoLink: "https://github.com/bipinsingh8052/Stone-Papper-scissors",
+    githubLink: "https://github.com/bipinsingh8052/Stone-Papper-scissors",
+  },{
+    title: "Quiz App",
+    image: "https://source.unsplash.com/400x300/?weather,forecast",
+    description: "that is the main work of javascript and html , css",
+    demoLink: "https://vercel.com/bipin-singhs-projects-254b2c79/quiz-app",
+    githubLink: "https://github.com/bipinsingh8052/Quiz-App",
+  },{
+    title: "QR- Generater",
+    image: "https://source.unsplash.com/400x300/?weather,forecast",
+    description: "Generater the QR any think using Api",
+    demoLink: "qr-generater-pqv9fjc2q-bipin-singhs-projects-254b2c79.vercel.app",
+    githubLink: "https://github.com/bipinsingh8052/QR-Generater",
+  },{
+    title: "NOtes-List-App",
+    image: "https://source.unsplash.com/400x300/?weather,forecast",
+    description: "You can create your notes and task",
+    demoLink: "notebook-app.netlify.app",
+    githubLink: "https://github.com/bipinsingh8052/Notes-List-app",
+  },{
+    title: "OTP Genertor",
+    image: "https://source.unsplash.com/400x300/?weather,forecast",
+    description: "Random password Generator",
+    demoLink: "https://github.com/bipinsingh8052/Random-Password-generater",
+    githubLink: "https://github.com/bipinsingh8052/Random-Password-generater",
+  },{
+    title: "tac-tic-toc",
+    image: "https://source.unsplash.com/400x300/?weather,forecast",
+    description: "You can play with Computer",
+    demoLink: "https://github.com/bipinsingh8052/tac-tic-toc",
+    githubLink: "https://github.com/bipinsingh8052/tac-tic-toc",
+  },{
+    title: "Currency Converter",
+    image: "https://source.unsplash.com/400x300/?weather,forecast",
+    description: "You can check the value you currency",
+    demoLink: "https://github.com/bipinsingh8052/Currency-Converter",
+    githubLink: "https://github.com/bipinsingh8052/Currency-Converter",
+  }
 ];
 
 const Project = () => {
@@ -123,7 +268,7 @@ const Project = () => {
             {projects.map((project, index) => (
               <motion.div
                 key={index}
-                className="col-md-4 "
+                className="col-md-4"
                 variants={{
                   hidden: { opacity: 0, x: 100 },
                   visible: { opacity: 1, x: 0, transition: { duration: 1.2, delay: index * 0.3 } },
