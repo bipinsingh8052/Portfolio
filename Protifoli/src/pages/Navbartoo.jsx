@@ -1,14 +1,16 @@
 import { useState } from "react";
 import "../css/Navbar.css"
+
+import { Link } from "react-router-dom";
 export default function Navbartoo() {
     const [isOpen, setIsOpen] = useState(false);
 
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark shadow">
       <div className="container">
-        <a className="navbar-brand " href="/">
+        <Link className="navbar-brand " to="/">
          Bipin <span>Singh</span> 
-        </a>
+        </Link>
         <button
           className={`navbar-toggler ${isOpen ? "open" : ""}`}
           type="button"
@@ -19,34 +21,34 @@ export default function Navbartoo() {
         <div className={`collapse navbar-collapse ${isOpen ? "show" : ""}`}>
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link className="nav-link" to='home'>
                 Home
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link className="nav-link" to="about">
                 About
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link className="nav-link" to="service">
                 Services
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link className="nav-link" to="contact">
                 Contact
-              </a>
+              </Link>
             </li>
 
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link className="nav-link" to="skills">
                 Skills
-              </a>
+              </Link>
             </li><li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link className="nav-link"  to="project">
                 Project
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

@@ -1,12 +1,15 @@
 import React, { useEffect, useRef, useState } from 'react'
 import '../css/About.css'
 import { motion, useAnimation } from "framer-motion";
+import { useNavigate } from 'react-router-dom';
 export default function About() {
     const controls = useAnimation();
     const sectionRef = useRef(null);
     const [isVisible, setIsVisible] = useState(false);
-
-
+let nav=useNavigate()
+const goto=()=>{
+nav("/contact")
+}
     
     const resumeData = [
         {
@@ -123,6 +126,7 @@ export default function About() {
               className="hire-me"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
+              onClick={goto}
             >
               Hire Me
             </motion.button>
