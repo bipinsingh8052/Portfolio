@@ -3,7 +3,7 @@ import "animate.css";
 import CV from '../images/NewBsc.pdf'
 import dp from '../images/dp.jpg'
 import "../css/Hersection.css";
-import { motion } from "framer-motion";
+import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useState } from "react";
 export default function HeroSection() {
   const roles = [ "Full Stack Developer","Front-end Developer", "Back-end Developer"];
@@ -11,6 +11,13 @@ export default function HeroSection() {
 
   const [displayText, setDisplayText] = useState("");
   const [index, setIndex] = useState(0);
+
+
+
+  
+  const controls = useAnimation();
+  const { ref, inView } = useInView({ triggerOnce: false });
+
 
   const handleDownload = () => {
     const link = document.createElement("a");
@@ -30,12 +37,20 @@ export default function HeroSection() {
       setIndex((prevIndex) => (prevIndex + 1) % roles.length);
       }, 3000); // Change role every 2 seconds
 
+
+
+      if (inView) {
+        controls.start("visible");
+      } else {
+        controls.start("hidden"); // Reset animation when out of view
+      }
+
       return () => clearTimeout(timer);
     }
-  }, [index])
+  }, [index,inView, controls])
   return (
   
-        <section className="hero-section d-flex flex-column flex-md-row align-items-center justify-content-center text-white p-5">
+           <section className="hero-section d-flex flex-column flex-md-row align-items-center justify-content-center text-white p-5">
           {/* Left Side - Profile Image */}
           <div className="position-relative text-center text-md-start mb-4 mb-md-0">
             <div className="orange-circle animate__animated animate__zoomIn"></div>
@@ -76,7 +91,7 @@ export default function HeroSection() {
               Download CV
             </a>
           </div>
-        </section>
+         </section>
 
   )
 }

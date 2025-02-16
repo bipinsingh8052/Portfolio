@@ -1,0 +1,25 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+  
+  .footer.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .footer.hide {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  
+
+
+
+  @media (max-width: 420px) {
+   .footer{font-size: 8px;} 
+  }
