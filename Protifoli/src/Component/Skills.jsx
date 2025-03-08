@@ -18,10 +18,10 @@ const Skills = () => {
     ],
     backend: [
       { name: "C++", level: 95 },
-      { name: "Python", level: 85 },
+      { name: "Node.js", level: 85 },
       { name: "DSA", level: 80 },
       { name: "JavaScript", level: 90 },
-      { name: "MySQL", level: 75 },
+      { name: "MongoDB", level: 75 },
     ],
   };
 

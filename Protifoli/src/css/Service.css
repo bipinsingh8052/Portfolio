@@ -102,7 +102,7 @@
 
 /* Highlighted Card */
 .highlight-card .flip-card-front {
-  background: orange;
+  background: transparent;
   color: white;
 }
 
